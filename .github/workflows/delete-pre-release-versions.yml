@@ -1,4 +1,4 @@
-name: delete-old-versions
+name: delete-pre-release-versions
 on:
   workflow_dispatch:
 
