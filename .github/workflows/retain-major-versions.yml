@@ -1,4 +1,4 @@
-name: delete-old-packages
+name: ignore-major-versions
 on:
   workflow_dispatch:
 
