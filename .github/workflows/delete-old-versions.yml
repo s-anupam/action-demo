@@ -8,12 +8,12 @@ jobs:
     
     steps:
       - name: Delete package
-        uses: actions/delete-package-versions@v2
+        uses: actions/delete-package-versions@355299fa7da7483d87bd9c992f2a0adb60f7551c
         with: 
             owner: NamrataJha
             repo: 'action-demo'
             package-name: 'action-demo'
-            min-versions-to-keep: 100
+            min-versions-to-keep: 10
 
 
  
