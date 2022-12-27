@@ -1,6 +1,7 @@
 name: delete-old-versions
 on:
   workflow_dispatch:
+  push:
 
 jobs:
   delete-old-packages:
@@ -8,7 +9,7 @@ jobs:
     
     steps:
       - name: Delete package
-        uses: actions/delete-package-versions@272ad859dcffb773a45c3de5f779e265cb6e11ef
+        uses: actions/delete-package-versions@280935cb1a537672d6f6bb39922ce37ffff40705
         with: 
             owner: s-anupam
             repo: 'npm-test-pkg'
