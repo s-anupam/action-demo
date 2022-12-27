@@ -8,11 +8,11 @@ jobs:
     
     steps:
       - name: Delete package
-        uses: actions/delete-package-versions@7515f7a4f93408ebed9d5fbc7933145ac7105b78
+        uses: actions/delete-package-versions@272ad859dcffb773a45c3de5f779e265cb6e11ef
         with: 
-            owner: NamrataJha
-            repo: 'action-demo'
-            package-name: 'action-demo'
+            owner: s-anupam
+            repo: 'npm-test-pkg'
+            package-name: 'npm-test-pkg'
             min-versions-to-keep: 1
 
 
