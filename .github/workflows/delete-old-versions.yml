@@ -14,9 +14,5 @@ jobs:
             repo: 'npm-test-pkg'
             package-name: 'npm-test-pkg'
             min-versions-to-keep: 1
-
-
- 
-
-
-          
+            package-type: 'npm'
+            
