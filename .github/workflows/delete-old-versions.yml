@@ -1,33 +1,7 @@
 name: delete-old-versions
 on:
   workflow_dispatch:
-    inputs:
-      package_version_ids:
-        required: false
-        
-      owner:
-        required: false
-        default: "s-anupam"
-
-      package_name:
-        required: false
-        default: "npm-test-pkg"
-
-      package_type:
-        required: true
-        default: "npm"
-
-      num_old_versions_to_delete:
-        required: false
-
-      min_versions_to_keep:
-        required: false
-
-      ignore_versions:
-        required: false
-
-      delete_only_pre_release_versions:
-        required: false
+  push:
 
 jobs:
   delete-old-packages:
@@ -37,11 +11,9 @@ jobs:
       - name: Delete package
         uses: actions/delete-package-versions@e521d9e753ae867c150eee3a19710fe8e3f0f333
         with: 
-            owner: ${{ inputs.owner }}
-            package-name: ${{ inputs.package_name }}
-            min-versions-to-keep: ${{ inputs.min_versions_to_keep }}
-            package-type: ${{ inputs.package_type }}
-            num-old-versions-to-delete: ${{ inputs.num_old_versions_to_delete }}
-            ignore-versions: ${{ inputs.ignore_versions }}
-            delete-only-pre-release-versions: ${{ inputs.delete_only_pre_release_versions }}
+            owner: 's-anupam'
+            repo: 'npm-test-pkg'
+            package-name: 'npm-test-pkg'
+            num-old-versions-to-delete: '150'
+            package-type: 'npm'
             
