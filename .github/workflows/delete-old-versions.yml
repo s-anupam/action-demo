@@ -14,5 +14,5 @@ jobs:
             owner: 's-anupam'
             repo: 'npm-test-pkg'
             package-name: 'npm-test-pkg'
-            min-versions-to-keep: 5
             package-type: 'npm'
+            delete-only-pre-release-versions: true
