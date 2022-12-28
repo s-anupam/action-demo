@@ -1,6 +1,9 @@
 name: delete-old-versions
 on:
   workflow_dispatch:
+    inputs:
+      delete_only_pre_release_versions:
+        required: false
   push:
 
 jobs:
@@ -16,4 +19,4 @@ jobs:
             package-name: 'npm-test-pkg'
             package-type: 'npm'
             min-versions-to-keep: 5
-            delete-only-pre-release-versions: true
+            delete-only-pre-release-versions: ${{ inputs.delete_only_pre_release_versions }}
