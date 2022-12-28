@@ -15,4 +15,4 @@ jobs:
             repo: 'npm-test-pkg'
             package-name: 'npm-test-pkg'
             package-type: 'npm'
-            delete-only-pre-release-versions: true
+            min-versions-to-keep: 5
