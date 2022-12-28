@@ -9,11 +9,11 @@ jobs:
     
     steps:
       - name: Delete package
-        uses: actions/delete-package-versions@280935cb1a537672d6f6bb39922ce37ffff40705
+        uses: actions/delete-package-versions@e521d9e753ae867c150eee3a19710fe8e3f0f333
         with: 
             owner: s-anupam
             repo: 'npm-test-pkg'
             package-name: 'npm-test-pkg'
-            min-versions-to-keep: 1
+            min-versions-to-keep: 5
             package-type: 'npm'
             
