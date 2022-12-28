@@ -14,6 +14,6 @@ jobs:
             owner: s-anupam
             repo: 'npm-test-pkg'
             package-name: 'npm-test-pkg'
-            min-versions-to-keep: 5
+            min-versions-to-keep: 40
             package-type: 'npm'
             
