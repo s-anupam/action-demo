@@ -1,7 +1,41 @@
 name: delete-old-versions
 on:
   workflow_dispatch:
-  push:
+    inputs:
+      checksum:
+        required: false
+        default: "e521d9e753ae867c150eee3a19710fe8e3f0f333"
+        
+      package_version_ids:
+        required: false
+        
+      owner:
+        required: false
+        default: "s-anupam"
+
+      package_name:
+        required: false
+        default: "npm-test-pkg"
+
+      package_type:
+        required: true
+        default: "npm"
+
+      num_old_versions_to_delete:
+        required: false
+
+      min_versions_to_keep:
+        required: false
+
+      ignore_versions:
+        required: false
+
+      delete_only_pre_release_versions:
+        required: false
+
+      token:
+        required: false
+        default: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
   delete-old-packages:
@@ -9,11 +43,14 @@ jobs:
     
     steps:
       - name: Delete package
-        uses: actions/delete-package-versions@e521d9e753ae867c150eee3a19710fe8e3f0f333
+        uses: actions/delete-package-versions@${{ inputs.checksum }}
         with: 
-            owner: s-anupam
-            repo: 'npm-test-pkg'
-            package-name: 'npm-test-pkg'
-            min-versions-to-keep: 40
-            package-type: 'npm'
+            owner: ${{ inputs.owner }}
+            package-name: ${{ inputs.package_name }}
+            min-versions-to-keep: ${{ inputs.min_versions_to_keep }}
+            package-type: ${{ inputs.package_type }}
+            num-old-versions-to-delete: ${{ inputs.num_old_versions_to_delete }}
+            ignore-versions: ${{ inputs.ignore_versions }}
+            delete-only-pre-release-versions: ${{ inputs.delete_only_pre_release_versions }}
+            token: ${{ inputs.token }}
             
