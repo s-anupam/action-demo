@@ -12,7 +12,7 @@ jobs:
     
     steps:
       - name: Delete package
-        uses: actions/delete-package-versions@s-anupam-rest-api
+        uses: actions/delete-package-versions@ng-fix-deletion
         with: 
             owner: 's-anupam'
             repo: 'npm-test-pkg'
