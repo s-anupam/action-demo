@@ -2,9 +2,34 @@ name: delete-old-versions
 on:
   workflow_dispatch:
     inputs:
+      package_version_ids:
+        required: false
+        
       delete_only_pre_release_versions:
         required: false
-  push:
+        
+      package_name:
+        required: false
+        default: 'npm-test-pkg'
+        
+      package_type:
+        required: false
+        default: 'npm'
+        
+      num_old_versions_to_delete:
+        required: false
+        default: '1'
+        
+      min_versions_to_keep:
+        required: false
+        default: '-1'
+        
+      ignore_versions:
+        required: false
+        default: '^$'
+        
+      owner:
+        required: false
 
 jobs:
   delete-old-packages:
@@ -12,10 +37,13 @@ jobs:
     
     steps:
       - name: Delete package
-        uses: actions/delete-package-versions@ng-fix-deletion
+        uses: actions/delete-package-versions@s-anupam-rest-api
         with: 
-            owner: 's-anupam'
-            repo: 'npm-test-pkg'
-            package-name: 'npm-test-pkg'
-            package-type: 'npm'
+            owner: ${{ inputs.owner }}
+            package-name: ${{ inputs.package_name }}
+            package-type: ${{ inputs.package_type }}
             delete-only-pre-release-versions: ${{ inputs.delete_only_pre_release_versions }}
+            num-old-versions-to-delete: ${{ inputs.num_old_versions_to_delete }}
+            min-versions-to-keep: ${{ inputs.min_versions_to_keep }}
+            ignore-versions: ${{ inputs.ignore_versions }}
+            package-version-ids: ${{ inputs.package_version_ids }}
