@@ -10,7 +10,6 @@ jobs:
       - name: Delete package
         uses: actions/delete-package-versions@s-anupam-rest-api
         with: 
-            package-name: 'ubuntu'
-            package-type: 'container'
-            min-versions-to-keep: 1
-            token: ${{ secrets.PACKAGES_TOKEN }}
+            package-name: 'npm-test-pkg'
+            package-type: 'npm'
+            package-version-ids: 61654321,61654317,61654315,61654311,61654306,61654298,61654292,61654289,61654286,61654281
