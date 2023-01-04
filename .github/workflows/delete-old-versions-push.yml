@@ -1,4 +1,4 @@
-name: delete-old-versions
+name: delete-old-versions-push
 on:
   push:
 
@@ -12,4 +12,4 @@ jobs:
         with: 
             package-name: 'npm-test-pkg'
             package-type: 'npm'
-            
+            delete-only-pre-release-versions: true
