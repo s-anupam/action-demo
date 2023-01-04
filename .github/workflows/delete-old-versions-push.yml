@@ -12,4 +12,4 @@ jobs:
         with: 
             package-name: 'npm-test-pkg'
             package-type: 'npm'
-            delete-only-pre-release-versions: true
+            num-old-versions-to-delete: 0
