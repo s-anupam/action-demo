@@ -10,6 +10,6 @@ jobs:
       - name: Delete package
         uses: actions/delete-package-versions@s-anupam-rest-api
         with: 
-            package-name: 'ubuntu-blah'
+            package-name: 'ubuntu'
             package-type: 'container'
-            min-versions-to-keep: 2
+            min-versions-to-keep: 1
