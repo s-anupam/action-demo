@@ -12,4 +12,5 @@ jobs:
         with: 
             package-name: 'npm-test-pkg'
             package-type: 'npm'
-            min-versions-to-keep: 1
+            min-versions-to-keep: 0
+            ignore-versions: '^([1-9]\\d*)\\.([1-9]\\d*)\\.0$'
