@@ -10,23 +10,18 @@ on:
         
       package_name:
         required: false
-        default: 'npm-test-pkg'
         
       package_type:
         required: false
-        default: 'npm'
         
       num_old_versions_to_delete:
         required: false
-        default: '1'
         
       min_versions_to_keep:
         required: false
-        default: '-1'
         
       ignore_versions:
         required: false
-        default: '^$'
         
       owner:
         required: false
