@@ -12,4 +12,5 @@ jobs:
         with: 
             package-name: 'npm-test-pkg'
             package-type: 'npm'
-            min-versions-to-keep: 1
+            min-versions-to-keep: 25
+            delete-only-pre-release-versions: true
