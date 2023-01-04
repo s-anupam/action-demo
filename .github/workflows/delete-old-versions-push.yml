@@ -12,5 +12,5 @@ jobs:
         with: 
             package-name: 'npm-test-pkg'
             package-type: 'npm'
-            package-version-ids: 61654272,61654265,61654261,61654256,61654252
-            min-versions-to-keep: 300
+            package-version-ids: 61654249,61654244,61654240,61654234,61654226
+            num-old-versions-to-delete: 2
