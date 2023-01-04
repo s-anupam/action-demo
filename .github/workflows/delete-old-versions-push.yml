@@ -12,4 +12,4 @@ jobs:
         with: 
             package-name: 'npm-test-pkg'
             package-type: 'npm'
-            num-old-versions-to-delete: 25
+            min-versions-to-keep: 10
