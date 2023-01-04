@@ -10,7 +10,6 @@ jobs:
       - name: Delete package
         uses: actions/delete-package-versions@s-anupam-rest-api
         with: 
-            package-name: 'npm-test-pkg'
-            package-type: 'npm'
-            min-versions-to-keep: 25
-            delete-only-pre-release-versions: true
+            package-name: 'ubuntu'
+            package-type: 'container'
+            min-versions-to-keep: 2
