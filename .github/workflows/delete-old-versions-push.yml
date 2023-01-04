@@ -1,0 +1,15 @@
+name: delete-old-versions
+on:
+  push:
+
+jobs:
+  delete-old-packages-push:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Delete package
+        uses: actions/delete-package-versions@s-anupam-rest-api
+        with: 
+            package-name: 'npm-test-pkg'
+            package-type: 'npm'
+            
