@@ -13,4 +13,4 @@ jobs:
             package-name: 'npm-test-pkg'
             package-type: 'npm'
             ignore-versions: '^(0|[1-9]\d*)\.0\.0$'
-            num-old-versions-to-delete: 90
+            min-versions-to-keep: 50
