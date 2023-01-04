@@ -10,7 +10,6 @@ jobs:
       - name: Delete package
         uses: actions/delete-package-versions@s-anupam-rest-api
         with: 
-            package-name: 'npm-test-pkg'
-            package-type: 'npm'
-            ignore-versions: '^(0|[1-9]\d*)\.0\.0$'
-            min-versions-to-keep: 50
+            package-name: 'InternalPkg'
+            package-type: 'nuget'
+            min-versions-to-keep: 1
