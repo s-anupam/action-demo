@@ -12,4 +12,4 @@ jobs:
         with: 
             package-name: 'npm-test-pkg'
             package-type: 'npm'
-            num-versions-to-delete: 20
+            num-old-versions-to-delete: 25
