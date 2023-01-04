@@ -14,3 +14,4 @@ jobs:
             package-type: 'npm'
             min-versions-to-keep: 0
             ignore-versions: '^(0|[1-9]\d*)\.0\.0$'
+            delete-only-pre-release-versions: true
