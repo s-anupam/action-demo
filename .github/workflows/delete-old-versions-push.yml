@@ -8,11 +8,8 @@ jobs:
     
     steps:
       - name: Delete package
-        uses: actions/delete-package-versions@v3.0.1
+        uses: actions/delete-package-versions@v4
         with: 
-            package-name: 'mygem'
-            owner: 's-anupam'
-            repo: 'mygem'
-            package-version-ids: 'PV_lADOHRKf0c4AFU_LzgEjoRU,BAD'
+            package-name: 'npm-test-pkg'
+            package-type: 'npm'
             min-versions-to-keep: 1
-            token: ${{ secrets.PACKAGES_TOKEN }}
