@@ -8,8 +8,11 @@ jobs:
     
     steps:
       - name: Delete package
-        uses: actions/delete-package-versions@s-anupam-rest-api
+        uses: actions/delete-package-versions@v3.0.1
         with: 
-            package-name: 'InternalPkg'
-            package-type: 'nuget'
+            package-name: 'mygem'
+            owner: 's-anupam'
+            repo: 'mygem'
+            package-version-ids: 'PV_lADOHRKf0c4AFU_LzgEjoRU,BAD'
             min-versions-to-keep: 1
+            token: ${{ secrets.PACKAGES_TOKEN }}
