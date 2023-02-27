@@ -1,6 +1,7 @@
 name: delete-old-versions-push
 on:
   push:
+  workflow_dispatch:
 
 jobs:
   delete-old-packages-push:
@@ -12,4 +13,4 @@ jobs:
         with: 
             package-name: 'npm-test-pkg'
             package-type: 'npm'
-            min-versions-to-keep: 1
+            num-old-versions-to-delete: 1
