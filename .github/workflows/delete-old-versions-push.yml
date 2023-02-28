@@ -9,8 +9,9 @@ jobs:
     
     steps:
       - name: Delete package
-        uses: actions/delete-package-versions@v4
+        uses: actions/delete-package-versions@s-anupam-untagged-flag
         with: 
-            package-name: 'ubuntu'
+            package-name: 'alpine'
             package-type: 'container'
-            num-old-versions-to-delete: 1
+            min-versions-to-keep: 5
+            delete-only-untagged-versions: true
