@@ -1,6 +1,5 @@
-name: delete-old-versions-push
+name: delete-old-versions-wd
 on:
-  push:
   workflow_dispatch:
 
 jobs:
