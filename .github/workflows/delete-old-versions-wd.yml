@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  delete-old-packages-push:
+  delete-old-versions-wd:
     runs-on: ubuntu-latest
     
     steps:
