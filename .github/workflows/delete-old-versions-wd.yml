@@ -12,4 +12,5 @@ jobs:
         with: 
             package-name: 'alpine'
             package-type: 'container'
-            min-versions-to-keep: 2
+            min-versions-to-keep: 7
+            delete-only-untagged-versions: false
