@@ -12,5 +12,5 @@ jobs:
         with: 
             package-name: 'npm-test-pkg'
             package-type: 'npm'
-            min-versions-to-keep: 10
-            delete-only-untagged-versions: true
+            min-versions-to-keep: 5
+            delete-only-untagged-versions: false
