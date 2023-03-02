@@ -8,9 +8,8 @@ jobs:
     
     steps:
       - name: Delete package
-        uses: actions/delete-package-versions@s-anupam-untagged-flag
+        uses: actions/delete-package-versions@master
         with: 
             package-name: 'alpine'
             package-type: 'container'
             min-versions-to-keep: 5
-            delete-only-untagged-versions: false
