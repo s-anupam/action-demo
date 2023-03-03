@@ -10,6 +10,6 @@ jobs:
       - name: Delete package
         uses: actions/delete-package-versions@s-anupam-untagged-flag
         with: 
-            package-name: 'alpine'
-            package-type: 'container'
-            min-versions-to-keep: 2
+            package-name: 'npm-test-pkg'
+            package-type: 'npm'
+            min-versions-to-keep: 3
